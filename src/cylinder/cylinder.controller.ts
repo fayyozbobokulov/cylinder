@@ -23,6 +23,7 @@ export class CylinderController {
     @Query() cylinderProps: CylinderPropsDto,
   ): Promise<{ data: number }> {
     const result = await this.cylinderService.getArea(cylinderProps);
+    this.logger.log('This is test to check');
     return toRes<number>(result);
   }
 }

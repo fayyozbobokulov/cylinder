@@ -11,6 +11,7 @@ export class LoggerConfigService {
       this.logger.setContext('LoggerConfigService');
       this.logger.info(`Changing log level to ${level}`);
       this.logger.logger.level = level;
+      PinoLogger.root.level = level;
     } catch (err) {
       this.logger.error('Failed to change log level', err);
     }

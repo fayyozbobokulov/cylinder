@@ -29,8 +29,8 @@ import { HealthModule } from './health/health.module';
         customProps: (req: Request, res: Response) => ({
           context: 'HTTP',
         }),
-        level: process.env.LOG_LEVEL || 'debug',
-        useLevel: 'debug',
+        level: process.env.LOG_LEVEL || 'info',
+        useLevel: 'info',
       },
     }),
     HealthModule,
