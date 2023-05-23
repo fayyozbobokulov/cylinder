@@ -1,0 +1,10 @@
+version: '3.7'
+services:
+  nats-streaming:
+    image: nats-streaming:latest
+    ports:
+      - 4222:4222
+    volumes:
+      - nats-data:/path/to/nats/data
+volumes:
+  nats-data:
